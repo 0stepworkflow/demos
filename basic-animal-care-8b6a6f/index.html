@@ -7,11 +7,12 @@
 <title>Basic Animal Care LLC. | Pet groomer in Houston, TX</title>
 <meta name="description" content="Basic Animal Care LLC. (Pet groomer) in Houston, TX. Call (832) 433-5378.">
 
-<!-- Preconnects for performance -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!-- JS flag: set before any stylesheet so .reveal starts hidden only when JS will reveal it -->
+<script>document.documentElement.classList.add('js')</script>
 
-<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<!-- Self-hosted fonts (preload the two most-used files) -->
+<link rel="preload" as="font" type="font/woff2" href="assets/fonts/fredoka-latin-wght-normal.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="assets/fonts/nunito-latin-wght-normal.woff2" crossorigin>
 
 <!-- Favicon: inline paw-print SVG, no external file needed -->
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🐾%3C/text%3E%3C/svg%3E">
@@ -22,31 +23,7 @@
 <meta property="og:type" content="website">
 <meta property="og:locale" content="en_US">
 
-<script src="https://cdn.tailwindcss.com"></script>
-<script>
-  tailwind.config = {
-    theme: {
-      extend: {
-        colors: {
-          cream: '#FFFBF6',
-          blush: '#FDECE1',
-          coral: { light: '#E79D9D', DEFAULT: '#E8825A', dark: '#C3090A' },
-          sage: { light: '#C7D8C3', DEFAULT: '#8AA68A', dark: '#4F6B52' },
-          clay: { DEFAULT: '#43342C', soft: '#7A6A5F' },
-          gold: '#E3A73F'
-        },
-        fontFamily: {
-          display: ['Fredoka', 'sans-serif'],
-          body: ['Nunito', 'sans-serif']
-        },
-        boxShadow: {
-          soft: '0 12px 30px -10px rgba(74, 59, 52, 0.25)',
-          softer: '0 6px 16px -6px rgba(74, 59, 52, 0.18)'
-        }
-      }
-    }
-  };
-</script>
+<link rel="stylesheet" href="css/tailwind.css">
 
 <link rel="stylesheet" href="css/style.css">
 
@@ -144,9 +121,9 @@
     </div>
 
     <figure id="hero-visual" class="relative h-[380px] sm:h-[440px] lg:h-[480px] lg:col-start-2 lg:row-start-1 lg:row-span-2" aria-label="Photos from Basic Animal Care LLC.">
-      <img class="hero-photo absolute w-[58%] max-w-[300px] aspect-[4/5] object-cover rounded-[2.5rem] shadow-soft border-8 border-cream top-0 right-4 sm:right-10 float-slow" style="--rot:4deg" src="assets/lead-hero.jpg" alt="Old English sheepdog with a freshly trimmed coat standing on a pink mat in front of a cartoon-dog backdrop" loading="eager" width="300" height="375">
-      <img class="hero-photo absolute w-[46%] max-w-[230px] aspect-square object-cover rounded-[2.5rem] shadow-soft border-8 border-cream bottom-4 left-0 sm:left-4 float-slow" style="--rot:-6deg; animation-delay: -2s;" src="assets/lead-work-1.jpg" alt="Black dog wearing an orange bat-print bandana sitting on a hay bale in front of a fall pumpkin backdrop" loading="lazy" width="230" height="230">
-      <img class="hero-photo absolute w-[38%] max-w-[190px] aspect-[3/4] object-cover rounded-[2rem] shadow-soft border-8 border-cream bottom-10 right-0 sm:right-8 float-slow" style="--rot:8deg; animation-delay: -3.5s;" src="assets/lead-work-2.jpg" alt="Golden dog in a purple paw-print bandana sitting on a pink mat in front of a Wash Your Paws backdrop" loading="lazy" width="190" height="253">
+      <img fetchpriority="high" class="hero-photo absolute w-[58%] max-w-[300px] aspect-[4/5] object-cover rounded-[2.5rem] shadow-soft border-8 border-cream top-0 right-4 sm:right-10 float-slow" style="--rot:4deg" src="assets/lead-hero.jpg" alt="Old English sheepdog with a freshly trimmed coat standing on a pink mat in front of a cartoon-dog backdrop" loading="eager" width="300" height="375">
+      <img class="hero-photo absolute w-[46%] max-w-[230px] aspect-square object-cover rounded-[2.5rem] shadow-soft border-8 border-cream bottom-4 left-0 sm:left-4 float-slow" style="--rot:-6deg; --fd:-2s;" src="assets/lead-work-1.jpg" alt="Black dog wearing an orange bat-print bandana sitting on a hay bale in front of a fall pumpkin backdrop" loading="eager" width="230" height="230">
+      <img class="hero-photo absolute w-[38%] max-w-[190px] aspect-[3/4] object-cover rounded-[2rem] shadow-soft border-8 border-cream bottom-10 right-0 sm:right-8 float-slow" style="--rot:8deg; --fd:-3.5s;" src="assets/lead-work-2.jpg" alt="Golden dog in a purple paw-print bandana sitting on a pink mat in front of a Wash Your Paws backdrop" loading="eager" width="190" height="253">
       <span class="absolute top-6 left-2 sm:left-0 bg-white shadow-soft rounded-2xl px-4 py-2.5 flex items-center gap-2 hero-photo" style="--rot:-3deg">
         <span class="w-2.5 h-2.5 rounded-full bg-sage-dark animate-pulse"></span>
         <span class="text-sm font-bold text-clay">Houston, TX</span>
@@ -612,9 +589,6 @@
   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
 </button>
 
-<!-- GSAP (animation) — loaded with defer so it never blocks first paint -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
 <script src="js/main.js" defer></script>
 <script src="js/contact-form.js" defer></script>
 </body>

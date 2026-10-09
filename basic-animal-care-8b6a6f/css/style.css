@@ -4,6 +4,41 @@
    that Tailwind's utility classes can't express cleanly).
 =================================================================== */
 
+/* ---------------------------------------------------------------
+   Self-hosted fonts (latin subset, variable weight) + metric-matched
+   fallbacks so the swap does not move the layout
+--------------------------------------------------------------- */
+@font-face {
+  font-family: 'Fredoka';
+  font-style: normal;
+  font-weight: 300 700;
+  font-display: swap;
+  src: url(../assets/fonts/fredoka-latin-wght-normal.woff2) format('woff2');
+  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+}
+@font-face {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 200 1000;
+  font-display: swap;
+  src: url(../assets/fonts/nunito-latin-wght-normal.woff2) format('woff2');
+  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+}
+@font-face {
+  font-family: 'Fredoka Fallback';
+  src: local('Arial');
+  size-adjust: 94%;
+  ascent-override: 103%;
+  descent-override: 25.5%;
+}
+@font-face {
+  font-family: 'Nunito Fallback';
+  src: local('Arial');
+  size-adjust: 101.5%;
+  ascent-override: 99.5%;
+  descent-override: 34.5%;
+}
+
 :root {
   --ease-soft: cubic-bezier(0.34, 1.56, 0.64, 1);
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
@@ -28,13 +63,13 @@ html {
 }
 
 body {
-  font-family: 'Nunito', sans-serif;
+  font-family: 'Nunito', 'Nunito Fallback', sans-serif;
   background-color: #FFFBF6;
   color: #43342C;
 }
 
 .font-display {
-  font-family: 'Fredoka', sans-serif;
+  font-family: 'Fredoka', 'Fredoka Fallback', sans-serif;
 }
 
 /* Focus visibility (accessibility priority #1) */
@@ -207,15 +242,78 @@ textarea:focus-visible,
 }
 
 /* ---------------------------------------------------------------
-   Reveal-on-scroll base state (GSAP takes over when JS runs;
-   this is the no-JS / pre-hydration fallback so content is never
-   invisible if a script fails to load)
+   Reveal-on-scroll. The head script adds .js before first paint;
+   js/main.js adds .is-in (IntersectionObserver). Without JS the
+   content is simply visible.
 --------------------------------------------------------------- */
-.reveal {
-  opacity: 1;
-}
-.js-ready .reveal {
+.js .reveal {
   opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.6s ease var(--d, 0s), transform 0.6s ease var(--d, 0s);
+}
+.js .reveal.is-in {
+  opacity: 1;
+  transform: none;
+}
+.js .service-card.reveal {
+  transition: opacity 0.6s ease var(--d, 0s), transform 0.6s ease var(--d, 0s), box-shadow 0.3s ease;
+}
+/* small stagger for cards that enter together (max 0.24s) */
+.grid > .reveal:nth-child(4n+2) { --d: 0.08s; }
+.grid > .reveal:nth-child(4n+3) { --d: 0.16s; }
+.grid > .reveal:nth-child(4n+4) { --d: 0.24s; }
+
+/* ---------------------------------------------------------------
+   Hero entrance: pure CSS, runs from first paint (no JS, no flash).
+   Text blocks fade/slide up in sequence; photos pop in with opacity
+   and the individual `scale` property so the float-slow animation
+   (which owns `transform`, incl. each photo's --rot rotation) is not
+   disturbed and the photos end at their original rotated positions.
+--------------------------------------------------------------- */
+@keyframes hero-in {
+  from { opacity: 0; transform: translateY(var(--hy, 14px)); }
+  to { opacity: 1; transform: none; }
+}
+@keyframes hero-photo-in {
+  from { opacity: 0; scale: 0.85; }
+  to { opacity: 1; scale: 1; }
+}
+#hero-eyebrow, #hero-heading, #hero-sub, #hero-ctas, #hero-trust {
+  animation: hero-in 0.5s ease-out both;
+  animation-delay: var(--hd, 0s);
+}
+#hero-eyebrow { --hy: 14px; --hd: 0s; }
+#hero-heading { --hy: 22px; --hd: 0.2s; animation-duration: 0.6s; }
+#hero-sub { --hy: 18px; --hd: 0.45s; }
+#hero-ctas { --hy: 14px; --hd: 0.65s; }
+#hero-trust { --hy: 12px; --hd: 0.85s; }
+.hero-photo {
+  animation: hero-photo-in 0.7s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+  animation-delay: var(--hd, 0.3s);
+}
+.hero-photo.float-slow {
+  animation-name: float-slow, hero-photo-in;
+  animation-duration: 6s, 0.7s;
+  animation-timing-function: ease-in-out, cubic-bezier(0.34, 1.56, 0.64, 1);
+  animation-iteration-count: infinite, 1;
+  animation-fill-mode: none, both;
+  animation-delay: var(--fd, 0s), var(--hd, 0.3s);
+}
+#hero-visual > .hero-photo:nth-child(1) { --hd: 0.3s; }
+#hero-visual > .hero-photo:nth-child(2) { --hd: 0.4s; }
+#hero-visual > .hero-photo:nth-child(3) { --hd: 0.5s; }
+#hero-visual > .hero-photo:nth-child(4) { --hd: 0.6s; }
+
+@media (prefers-reduced-motion: reduce) {
+  #hero-eyebrow, #hero-heading, #hero-sub, #hero-ctas, #hero-trust,
+  .hero-photo, .hero-photo.float-slow {
+    animation: none !important;
+  }
+  .js .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
 }
 
 /* Star rating */

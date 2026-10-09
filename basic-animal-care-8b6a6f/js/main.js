@@ -1,16 +1,12 @@
 // ===================================================================
 // Pet grooming template — interactions & motion
-// GSAP + ScrollTrigger drive reveals; everything degrades gracefully
-// if GSAP fails to load (no-JS fallback content stays visible via
-// the .js-ready gate in style.css).
+// Scroll reveals use IntersectionObserver + CSS (no animation library).
 // ===================================================================
 
 (function () {
   'use strict';
 
   var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-  document.documentElement.classList.add('js-ready');
 
   /* -----------------------------------------------------------
      Current year in footer
@@ -210,109 +206,26 @@
   }
 
   /* -----------------------------------------------------------
-     Animated stat counters
+     Scroll reveals. CSS (.js .reveal / .is-in in style.css) does the
+     animation; this only flips the class once an element is in view.
+     Hero entrance is pure CSS and needs nothing here.
   ----------------------------------------------------------- */
-  function animateCount(el) {
-    var target = parseInt(el.getAttribute('data-count-to'), 10) || 0;
-    var suffix = el.getAttribute('data-suffix') || '';
-    if (prefersReducedMotion) {
-      el.textContent = target + suffix;
-      return;
-    }
-    var obj = { val: 0 };
-    if (window.gsap) {
-      gsap.to(obj, {
-        val: target,
-        duration: 1.6,
-        ease: 'power2.out',
-        onUpdate: function () {
-          el.textContent = Math.round(obj.val) + suffix;
-        }
-      });
-    } else {
-      el.textContent = target + suffix;
-    }
-  }
+  var revealEls = Array.prototype.slice.call(document.querySelectorAll('.reveal'));
+  function showReveal(el) { el.classList.add('is-in'); }
 
-  /* -----------------------------------------------------------
-     GSAP scroll reveals (guarded — page still works without it)
-  ----------------------------------------------------------- */
-  function revealAllNow() {
-    // No GSAP / ScrollTrigger: show everything and set the final counter values
-    document.querySelectorAll('.reveal').forEach(function (el) {
-      el.style.opacity = '1';
-      el.style.transform = 'none';
-    });
-    document.querySelectorAll('[data-count-to]').forEach(animateCount);
-  }
-
-  function initGSAP() {
-    if (!window.gsap || !window.ScrollTrigger) {
-      revealAllNow();
-      return;
-    }
-    gsap.registerPlugin(window.ScrollTrigger);
-
-    if (prefersReducedMotion) {
-      gsap.set('.reveal', { opacity: 1, y: 0 });
-    } else {
-      // Hero entrance (each step is skipped when its element was removed)
-      var heroTl = gsap.timeline({ defaults: { ease: 'power2.out' } });
-      var heroSteps = [
-        ['#hero-eyebrow', { opacity: 0, y: 14, duration: 0.5 }, null],
-        ['#hero-heading', { opacity: 0, y: 22, duration: 0.6 }, '-=0.3'],
-        ['#hero-sub', { opacity: 0, y: 18, duration: 0.5 }, '-=0.35'],
-        ['#hero-ctas', { opacity: 0, y: 14, duration: 0.5 }, '-=0.3'],
-        ['#hero-trust', { opacity: 0, y: 12, duration: 0.5 }, '-=0.3'],
-        ['.hero-photo', {
-          opacity: 0,
-          scale: 0.85,
-          rotate: 0,
-          duration: 0.7,
-          stagger: 0.12,
-          ease: 'back.out(1.6)'
-        }, '-=0.5']
-      ];
-      heroSteps.forEach(function (step) {
-        if (!document.querySelector(step[0])) return;
-        if (step[2] === null) {
-          heroTl.from(step[0], step[1]);
-        } else {
-          heroTl.from(step[0], step[1], step[2]);
-        }
-      });
-
-      // Generic scroll reveal for anything with .reveal
-      gsap.utils.toArray('.reveal').forEach(function (el) {
-        gsap.fromTo(el, { opacity: 0, y: 16 }, {
-          opacity: 1,
-          y: 0,
-          duration: 0.5,
-          ease: 'power1.out',
-          scrollTrigger: {
-            trigger: el,
-            start: 'top 88%',
-            toggleActions: 'play none none reverse'
-          }
-        });
-      });
-    }
-
-    // Stat counters trigger on view regardless of reduced-motion (value itself isn't motion-sensitive content)
-    document.querySelectorAll('[data-count-to]').forEach(function (el) {
-      ScrollTrigger.create({
-        trigger: el,
-        start: 'top 90%',
-        once: true,
-        onEnter: function () { animateCount(el); }
-      });
-    });
-  }
-
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initGSAP);
+  if (!('IntersectionObserver' in window) || prefersReducedMotion) {
+    revealEls.forEach(showReveal);
   } else {
-    initGSAP();
+    var revealObserver = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        // also catch elements already scrolled past (e.g. after an anchor jump)
+        if (entry.isIntersecting || entry.boundingClientRect.top < 0) {
+          showReveal(entry.target);
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { rootMargin: '0px 0px -10% 0px', threshold: 0.1 });
+    revealEls.forEach(function (el) { revealObserver.observe(el); });
   }
 
   /* -----------------------------------------------------------
