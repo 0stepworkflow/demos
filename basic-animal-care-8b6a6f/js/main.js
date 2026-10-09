@@ -71,6 +71,12 @@
       menuIconClose && menuIconClose.classList.toggle('hidden', !isOpen);
     });
 
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && mobileMenu.classList.contains('open')) {
+        closeMenu();
+        menuBtn.focus();
+      }
+    });
     mobileMenu.querySelectorAll('a').forEach(function (link) {
       link.addEventListener('click', closeMenu);
     });
