@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Basic Animal Care LLC. | Pet groomer in Houston, TX</title>
+<meta name="description" content="Basic Animal Care LLC. (Pet groomer) in Houston, TX. Call (832) 433-5378.">
+
+<!-- Preconnects for performance -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<!-- Favicon: inline paw-print SVG, no external file needed -->
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🐾%3C/text%3E%3C/svg%3E">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Basic Animal Care LLC. | Houston, TX">
+<meta property="og:description" content="Basic Animal Care LLC. (Pet groomer) in Houston, TX. Call (832) 433-5378.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          cream: '#FFFBF6',
+          blush: '#FDECE1',
+          coral: { light: '#E79D9D', DEFAULT: '#E8825A', dark: '#C3090A' },
+          sage: { light: '#C7D8C3', DEFAULT: '#8AA68A', dark: '#4F6B52' },
+          clay: { DEFAULT: '#43342C', soft: '#7A6A5F' },
+          gold: '#E3A73F'
+        },
+        fontFamily: {
+          display: ['Fredoka', 'sans-serif'],
+          body: ['Nunito', 'sans-serif']
+        },
+        boxShadow: {
+          soft: '0 12px 30px -10px rgba(74, 59, 52, 0.25)',
+          softer: '0 6px 16px -6px rgba(74, 59, 52, 0.18)'
+        }
+      }
+    }
+  };
+</script>
+
+<link rel="stylesheet" href="css/style.css">
+
+<!-- LocalBusiness structured data for local SEO -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "PetGroomer",
+  "name": "Basic Animal Care LLC.",
+  "telephone": "+18324335378",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "8103 Airline Dr Ste k65",
+    "addressLocality": "Houston",
+    "addressRegion": "TX",
+    "postalCode": "77037",
+    "addressCountry": "US"
+  }
+}
+</script>
+</head>
+
+<body class="bg-cream text-clay font-body antialiased">
+
+<a href="#main-content" class="skip-link font-semibold">Skip to main content</a>
+
+<!-- =================================================================
+     HEADER / NAV
+================================================================== -->
+<header id="site-header" class="fixed top-0 inset-x-0 z-50 bg-cream/80">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8 flex items-center justify-between h-20">
+    <a href="#home" class="flex items-center gap-2 group">
+      <span class="w-11 h-11 rounded-2xl bg-coral overflow-hidden flex items-center justify-center shadow-softer group-hover:-rotate-6 transition-transform duration-300">
+        <img src="assets/lead-logo.jpg" alt="Basic Animal Care LLC. logo" class="w-full h-full object-cover" width="44" height="44">
+      </span>
+      <span class="font-display font-semibold text-lg sm:text-xl text-clay">Basic Animal Care LLC.</span>
+    </a>
+
+    <nav class="hidden lg:flex items-center gap-8 font-semibold text-clay/90" aria-label="Primary">
+      <a href="#services" class="nav-link">Services</a>
+      <a href="#gallery" class="nav-link">Gallery</a>
+      <a href="#about" class="nav-link">About</a>
+      <a href="#reviews" class="nav-link">Reviews</a>
+      <a href="#pricing" class="nav-link">Pricing</a>
+      <a href="#contact" class="nav-link">Contact</a>
+    </nav>
+
+    <div class="hidden lg:flex items-center gap-4">
+      <a href="tel:+18324335378" class="flex items-center gap-2 font-semibold text-clay hover:text-coral-dark transition-colors">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.2 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.7 21 3 13.3 3 4c0-.6.4-1 1-1h3.2c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.3 1.1L6.6 10.8Z" stroke="#C3090A" stroke-width="1.8" stroke-linejoin="round"/></svg>
+        (832) 433-5378
+      </a>
+      <a href="#contact" class="inline-flex items-center gap-2 bg-coral-dark hover:bg-coral text-white font-bold px-5 py-2.5 rounded-full shadow-softer transition-all duration-300 hover:scale-105">
+        Contact Us
+      </a>
+    </div>
+
+    <button id="menu-toggle" class="lg:hidden p-2 -mr-2" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
+      <svg id="icon-menu-open" width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke="#43342C" stroke-width="2" stroke-linecap="round"/></svg>
+      <svg id="icon-menu-close" width="28" height="28" viewBox="0 0 24 24" fill="none" class="hidden" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" stroke="#43342C" stroke-width="2" stroke-linecap="round"/></svg>
+    </button>
+  </div>
+
+  <div id="mobile-menu" class="lg:hidden absolute inset-x-0 top-full bg-cream shadow-xl rounded-b-3xl border-t border-coral-light/30 px-6 py-6">
+    <nav class="flex flex-col gap-4 font-semibold text-lg" aria-label="Mobile">
+      <a href="#services" class="nav-link">Services</a>
+      <a href="#gallery" class="nav-link">Gallery</a>
+      <a href="#about" class="nav-link">About</a>
+      <a href="#reviews" class="nav-link">Reviews</a>
+      <a href="#pricing" class="nav-link">Pricing</a>
+      <a href="#contact" class="nav-link">Contact</a>
+      <a href="tel:+18324335378" class="nav-link text-coral-dark">(832) 433-5378</a>
+      <a href="#contact" class="inline-flex justify-center items-center gap-2 bg-coral-dark text-white font-bold px-5 py-3 rounded-full mt-2">Contact Us</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main-content">
+
+<!-- =================================================================
+     HERO
+================================================================== -->
+<section id="home" class="relative overflow-hidden pt-32 pb-20 sm:pt-40 sm:pb-28">
+  <!-- decorative organic blobs -->
+  <div class="hero-blob-bg blob-shape blob-animate w-72 h-72 sm:w-96 sm:h-96 bg-blush -top-10 -left-24" aria-hidden="true"></div>
+  <div class="hero-blob-bg blob-shape-alt blob-animate w-64 h-64 sm:w-80 sm:h-80 bg-sage-light/60 -bottom-16 right-0" aria-hidden="true" style="animation-delay: -4s;"></div>
+
+  <div class="relative max-w-7xl mx-auto px-5 sm:px-8 grid gap-10 lg:grid-cols-2 lg:gap-x-14 lg:gap-y-0 lg:items-center">
+    <div class="lg:col-start-1 lg:row-start-1">
+      <p id="hero-eyebrow" class="inline-flex items-center gap-2 bg-blush text-coral-dark font-bold text-sm px-4 py-1.5 rounded-full mb-5">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21s-7-4.6-9.5-9C.5 8.2 2 4.5 5.6 4c2-.3 3.7.7 4.9 2.3C11.7 4.7 13.4 3.7 15.4 4c3.6.5 5.1 4.2 3.1 8-2.5 4.4-9.5 9-9.5 9Z" fill="#C3090A"/></svg>
+        Pet groomer in Houston
+      </p>
+      <h1 id="hero-heading" class="font-display font-semibold text-4xl sm:text-5xl lg:text-[3.4rem] leading-[1.08] text-clay">
+        Gentle, professional grooming <span class="text-coral-dark">for dogs</span> of every size.
+      </h1>
+    </div>
+
+    <figure id="hero-visual" class="relative h-[380px] sm:h-[440px] lg:h-[480px] lg:col-start-2 lg:row-start-1 lg:row-span-2" aria-label="Photos from Basic Animal Care LLC.">
+      <img class="hero-photo absolute w-[58%] max-w-[300px] aspect-[4/5] object-cover rounded-[2.5rem] shadow-soft border-8 border-cream top-0 right-4 sm:right-10 float-slow" style="--rot:4deg" src="assets/lead-hero.jpg" alt="Old English sheepdog with a freshly trimmed coat standing on a pink mat in front of a cartoon-dog backdrop" loading="eager" width="300" height="375">
+      <img class="hero-photo absolute w-[46%] max-w-[230px] aspect-square object-cover rounded-[2.5rem] shadow-soft border-8 border-cream bottom-4 left-0 sm:left-4 float-slow" style="--rot:-6deg; animation-delay: -2s;" src="assets/lead-work-1.jpg" alt="Black dog wearing an orange bat-print bandana sitting on a hay bale in front of a fall pumpkin backdrop" loading="lazy" width="230" height="230">
+      <img class="hero-photo absolute w-[38%] max-w-[190px] aspect-[3/4] object-cover rounded-[2rem] shadow-soft border-8 border-cream bottom-10 right-0 sm:right-8 float-slow" style="--rot:8deg; animation-delay: -3.5s;" src="assets/lead-work-2.jpg" alt="Golden dog in a purple paw-print bandana sitting on a pink mat in front of a Wash Your Paws backdrop" loading="lazy" width="190" height="253">
+      <span class="absolute top-6 left-2 sm:left-0 bg-white shadow-soft rounded-2xl px-4 py-2.5 flex items-center gap-2 hero-photo" style="--rot:-3deg">
+        <span class="w-2.5 h-2.5 rounded-full bg-sage-dark animate-pulse"></span>
+        <span class="text-sm font-bold text-clay">Houston, TX</span>
+      </span>
+    </figure>
+
+    <div class="lg:col-start-1 lg:row-start-2">
+      <p id="hero-sub" class="lg:mt-6 text-lg text-clay-soft max-w-lg">
+        Basic Animal Care LLC. is a pet groomer in Houston offering dog grooming, nail trims and a self-serve dog wash station.
+      </p>
+
+      <div id="hero-ctas" class="mt-8 flex flex-wrap items-center gap-4">
+        <a href="#contact" class="inline-flex items-center gap-2 bg-coral-dark hover:bg-coral text-white font-bold px-7 py-3.5 rounded-full shadow-soft transition-all duration-300 hover:scale-105">
+          Contact Us
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a href="tel:+18324335378" class="inline-flex items-center gap-2 bg-white hover:bg-blush text-clay font-bold px-7 py-3.5 rounded-full shadow-softer transition-all duration-300 border border-coral-light/40">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.2 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.7 21 3 13.3 3 4c0-.6.4-1 1-1h3.2c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.3 1.1L6.6 10.8Z" stroke="#C3090A" stroke-width="1.8" stroke-linejoin="round"/></svg>
+          Call Us
+        </a>
+      </div>
+
+      <div id="hero-trust" class="mt-10 flex flex-wrap items-center gap-x-8 gap-y-4">
+        <div class="flex items-center gap-2">
+          <div class="star-row flex gap-0.5 text-gold" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.8L5.8 21l1.6-7L2 9.2l7.1-.6L12 2Z"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.8L5.8 21l1.6-7L2 9.2l7.1-.6L12 2Z"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.8L5.8 21l1.6-7L2 9.2l7.1-.6L12 2Z"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.8L5.8 21l1.6-7L2 9.2l7.1-.6L12 2Z"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.8L5.8 21l1.6-7L2 9.2l7.1-.6L12 2Z"/></svg>
+          </div>
+          <span class="font-bold text-sm text-clay">4.8/5 <span class="font-medium text-clay-soft">(20 Google reviews)</span></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="wave-divider" style="background-color:#FFFBF6;" aria-hidden="true">
+  <svg viewBox="0 0 1440 100" preserveAspectRatio="none" focusable="false">
+    <path d="M0,40 C240,85 480,0 720,38 C960,76 1200,10 1440,46 L1440,100 L0,100 Z" fill="#C3090A"></path>
+  </svg>
+</div>
+
+<!-- =================================================================
+     TRUST / STATS STRIP (Google rating and review count only)
+================================================================== -->
+<section id="stats" class="bg-coral-dark">
+  <div class="max-w-2xl mx-auto px-5 sm:px-8 py-10 grid grid-cols-2 gap-8 text-center">
+    <div class="reveal">
+      <p class="font-display font-semibold text-3xl sm:text-4xl text-white"><span data-count-to="4" data-suffix=".8★">0</span></p>
+      <p class="text-white/80 font-semibold text-sm mt-1">Google rating</p>
+    </div>
+    <div class="reveal">
+      <p class="font-display font-semibold text-3xl sm:text-4xl text-white"><span data-count-to="20">0</span></p>
+      <p class="text-white/80 font-semibold text-sm mt-1">Google reviews</p>
+    </div>
+  </div>
+</section>
+
+<div class="wave-divider" style="background-color:#C3090A;" aria-hidden="true">
+  <svg viewBox="0 0 1440 100" preserveAspectRatio="none" focusable="false">
+    <path d="M0,40 C240,85 480,0 720,38 C960,76 1200,10 1440,46 L1440,100 L0,100 Z" fill="#FFFBF6"></path>
+  </svg>
+</div>
+
+<!-- =================================================================
+     SERVICES
+================================================================== -->
+<section id="services" class="py-24 sm:py-28">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8">
+    <div class="max-w-2xl mx-auto text-center reveal">
+      <p class="font-bold text-coral-dark uppercase tracking-wide text-sm">Our Services</p>
+      <h2 class="font-display font-semibold text-3xl sm:text-4xl mt-2 text-clay">Grooming services</h2>
+      <p class="mt-4 text-clay-soft">What Basic Animal Care LLC. offers in Houston.</p>
+    </div>
+
+    <div class="mt-16 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="service-card reveal bg-white rounded-3xl p-7 shadow-softer hover:shadow-soft transition-shadow duration-300 border border-blush">
+        <span class="icon-badge w-16 h-16 bg-blush">
+          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 12h16M4 12a4 4 0 0 0 4 4h8a4 4 0 0 0 4-4M4 12V9a2 2 0 0 1 2-2h1M9 5.5a1.5 1.5 0 1 1 3 0" stroke="#C3090A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+        <h3 class="font-display font-semibold text-xl mt-5 text-clay">Dog grooming</h3>
+        <p class="mt-2 text-sm text-clay-soft">Grooming to keep your dog clean, neat and comfortable.</p>
+        <p class="mt-4 font-bold text-coral-dark">Call for pricing</p>
+      </div>
+
+      <div class="service-card reveal bg-white rounded-3xl p-7 shadow-softer hover:shadow-soft transition-shadow duration-300 border border-blush">
+        <span class="icon-badge w-16 h-16 bg-sage-light/60">
+          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9l3 3-3 3M9.5 6a3.5 3.5 0 1 0 0 7M9.5 13a3.5 3.5 0 1 0 0 7M9 12h11" stroke="#4F6B52" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+        <h3 class="font-display font-semibold text-xl mt-5 text-clay">Self-serve dog wash station</h3>
+        <p class="mt-2 text-sm text-clay-soft">You bathe your own dog, and supplies are provided.</p>
+        <p class="mt-4 font-bold text-coral-dark">starts at $12 + tax</p>
+      </div>
+
+      <div class="service-card reveal bg-white rounded-3xl p-7 shadow-softer hover:shadow-soft transition-shadow duration-300 border border-blush">
+        <span class="icon-badge w-16 h-16 bg-gold/20">
+          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3c1.5 2 1.5 4-.5 5.5C13.5 10 15 12 13 14M9 8c-1.7 1.2-1.7 3 0 4.2M8 21l1-4h6l1 4M9 17c0-2.5 1.3-4 3-4s3 1.5 3 4" stroke="#C68A1F" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+        <h3 class="font-display font-semibold text-xl mt-5 text-clay">Pittie Spa Package</h3>
+        <p class="mt-2 text-sm text-clay-soft">An October promo with a bath, blueberry facial, ear cleaning, nail trim, paw balm and mouth spray.</p>
+        <p class="mt-4 font-bold text-coral-dark">$40 + tax</p>
+      </div>
+
+      <div class="service-card reveal bg-white rounded-3xl p-7 shadow-softer hover:shadow-soft transition-shadow duration-300 border border-blush">
+        <span class="icon-badge w-16 h-16 bg-coral-light/30">
+          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21s-7-4.6-9.5-9C.5 8.2 2 4.5 5.6 4c2-.3 3.7.7 4.9 2.3C11.7 4.7 13.4 3.7 15.4 4c3.6.5 5.1 4.2 3.1 8-2.5 4.4-9.5 9-9.5 9Z" stroke="#C3090A" stroke-width="1.8" stroke-linejoin="round"/></svg>
+        </span>
+        <h3 class="font-display font-semibold text-xl mt-5 text-clay">Nail trims</h3>
+        <p class="mt-2 text-sm text-clay-soft">Nail trims to keep your dog's paws comfortable.</p>
+        <p class="mt-4 font-bold text-coral-dark">Call for pricing</p>
+      </div>
+
+      <div class="service-card reveal bg-white rounded-3xl p-7 shadow-softer hover:shadow-soft transition-shadow duration-300 border border-blush">
+        <span class="icon-badge w-16 h-16 bg-blush">
+          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 3c-3.5 0-6 3-6 6.5C3 15 8 21 9 21s1-1 1-2.5V17c0-1 .7-1.5 2-1.5s2 .5 2 1.5v1.5c0 1.5 0 2.5 1 2.5s6-6 6-11.5C21 6 18.5 3 15 3c-1.6 0-2.6.8-3 2-.4-1.2-1.4-2-3-2Z" stroke="#C3090A" stroke-width="1.7" stroke-linejoin="round"/></svg>
+        </span>
+        <h3 class="font-display font-semibold text-xl mt-5 text-clay">Same-day pickup and drop-off</h3>
+        <p class="mt-2 text-sm text-clay-soft">Pickup and drop-off for your dog on the same day. Call to ask how it works.</p>
+        <p class="mt-4 font-bold text-coral-dark">Call for pricing</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="wave-divider" style="background-color:#FFFBF6;" aria-hidden="true">
+  <svg viewBox="0 0 1440 100" preserveAspectRatio="none" focusable="false">
+    <path d="M0,40 C240,85 480,0 720,38 C960,76 1200,10 1440,46 L1440,100 L0,100 Z" fill="#FDECE1"></path>
+  </svg>
+</div>
+
+<!-- =================================================================
+     PHOTO CAROUSEL
+================================================================== -->
+<section id="gallery" class="py-24 sm:py-28 bg-blush overflow-hidden">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8">
+    <div class="max-w-2xl mx-auto text-center reveal">
+      <p class="font-bold text-coral-dark uppercase tracking-wide text-sm">Gallery</p>
+      <h2 class="font-display font-semibold text-3xl sm:text-4xl mt-2 text-clay">Photos from Basic Animal Care LLC.</h2>
+      <p class="mt-4 text-clay-soft">Drag to browse, or click a photo to bring it front and center.</p>
+    </div>
+  </div>
+
+  <div id="photo-carousel-track" class="photo-carousel-track mt-8 reveal" role="region" aria-label="Photo gallery, browse by dragging">
+    <div class="photo-carousel-card"><img src="assets/lead-work-1.jpg" alt="Black dog wearing an orange bat-print bandana sitting on a hay bale in front of a fall pumpkin backdrop" loading="lazy" width="230" height="290"></div>
+    <div class="photo-carousel-card"><img src="assets/lead-work-2.jpg" alt="Golden dog in a purple paw-print bandana sitting on a pink mat in front of a Wash Your Paws backdrop" loading="lazy" width="230" height="290"></div>
+    <div class="photo-carousel-card"><img src="assets/lead-work-3.jpg" alt="Small gray dog with a beard and an orange pumpkin bandana standing on a pink mat in front of a cartoon-dog backdrop" loading="lazy" width="230" height="290"></div>
+    <div class="photo-carousel-card"><img src="assets/lead-work-4.jpg" alt="Small white and gray dog in a purple bandana sitting on a hay bale in front of a fall pumpkin backdrop" loading="lazy" width="230" height="290"></div>
+    <div class="photo-carousel-card"><img src="assets/lead-work-5.jpg" alt="Brown and white English bulldog in a green paw-print bandana sitting on a pink mat" loading="lazy" width="230" height="290"></div>
+    <div class="photo-carousel-card"><img src="assets/lead-work-6.jpg" alt="Small tan dog in an orange shirt and bandana sitting on a hay bale in front of a lantern and fall leaves backdrop" loading="lazy" width="230" height="290"></div>
+    <div class="photo-carousel-card"><img src="assets/lead-place.jpg" alt="Storefront of the shop at suite K65 with a blue Pet Grooming sign above the glass doors and a neon OPEN sign" loading="lazy" width="230" height="290"></div>
+  </div>
+</section>
+
+<div class="wave-divider" style="background-color:#FDECE1;" aria-hidden="true">
+  <svg viewBox="0 0 1440 100" preserveAspectRatio="none" focusable="false">
+    <path d="M0,40 C240,85 480,0 720,38 C960,76 1200,10 1440,46 L1440,100 L0,100 Z" fill="#FFFBF6"></path>
+  </svg>
+</div>
+
+<!-- =================================================================
+     ABOUT
+================================================================== -->
+<section id="about" class="py-24 sm:py-28">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8 grid lg:grid-cols-2 gap-14 items-center">
+    <div class="relative reveal order-2 lg:order-1">
+      <div class="blob-shape overflow-hidden shadow-soft aspect-[4/3] max-w-lg mx-auto lg:mx-0">
+        <img src="assets/lead-place.jpg" alt="Storefront of the shop at suite K65 with a blue Pet Grooming sign above the glass doors and a neon OPEN sign" class="w-full h-full object-cover" loading="lazy" width="600" height="450">
+      </div>
+      <span class="hidden sm:flex absolute -bottom-6 -right-4 bg-white rounded-2xl shadow-soft px-5 py-4 items-center gap-3 max-w-[220px]">
+        <span class="icon-badge w-11 h-11 bg-blush shrink-0">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21s-7-4.6-9.5-9C.5 8.2 2 4.5 5.6 4c2-.3 3.7.7 4.9 2.3C11.7 4.7 13.4 3.7 15.4 4c3.6.5 5.1 4.2 3.1 8-2.5 4.4-9.5 9-9.5 9Z" fill="#C3090A"/></svg>
+        </span>
+        <span class="text-sm font-bold text-clay">4.8 on Google from 20 reviews</span>
+      </span>
+    </div>
+
+    <div class="reveal order-1 lg:order-2">
+      <p class="font-bold text-coral-dark uppercase tracking-wide text-sm">About Us</p>
+      <h2 class="font-display font-semibold text-3xl sm:text-4xl mt-2 text-clay">About Basic Animal Care LLC.</h2>
+      <p class="mt-5 text-clay-soft">
+        Basic Animal Care LLC. is a pet groomer on Airline Dr in Houston. The shop offers dog grooming and nail trims, plus a self-serve dog wash station for owners who want to bathe their own dog. Same-day pickup and drop-off is available too.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- =================================================================
+     TESTIMONIALS (word-for-word Google review quotes only)
+================================================================== -->
+<section id="reviews" class="py-24 sm:py-28">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8">
+    <div class="max-w-2xl mx-auto text-center reveal">
+      <p class="font-bold text-coral-dark uppercase tracking-wide text-sm">Reviews</p>
+      <h2 class="font-display font-semibold text-3xl sm:text-4xl mt-2 text-clay">What customers say on Google</h2>
+    </div>
+
+    <div class="mt-16 grid md:grid-cols-2 max-w-4xl mx-auto gap-6">
+      <article class="reveal bg-white rounded-3xl p-7 shadow-softer border border-blush">
+        <div class="flex items-center gap-3">
+          <div>
+            <p class="font-bold text-clay">A</p>
+            <p class="text-xs text-clay-soft">Google review</p>
+          </div>
+        </div>
+        <blockquote class="mt-4 text-clay-soft"><span class="quote-mark text-3xl text-coral-light align-middle">&ldquo;</span>Mitzie alwayssss gets the best of the best with Sara and Cristal ❤️🐶🩷</blockquote>
+      </article>
+
+      <article class="reveal bg-white rounded-3xl p-7 shadow-softer border border-blush">
+        <div class="flex items-center gap-3">
+          <div>
+            <p class="font-bold text-clay">Silvia</p>
+            <p class="text-xs text-clay-soft">Google review</p>
+          </div>
+        </div>
+        <blockquote class="mt-4 text-clay-soft"><span class="quote-mark text-3xl text-coral-light align-middle">&ldquo;</span>I schedule monthly grooming for my dog, and they are always attentive, caring, and professional.</blockquote>
+      </article>
+    </div>
+  </div>
+</section>
+
+<div class="wave-divider" style="background-color:#FFFBF6;" aria-hidden="true">
+  <svg viewBox="0 0 1440 100" preserveAspectRatio="none" focusable="false">
+    <path d="M0,40 C240,85 480,0 720,38 C960,76 1200,10 1440,46 L1440,100 L0,100 Z" fill="#FDECE1"></path>
+  </svg>
+</div>
+
+<!-- =================================================================
+     PRICING (only prices listed in the profile)
+================================================================== -->
+<section id="pricing" class="py-24 sm:py-28 bg-blush">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8">
+    <div class="max-w-2xl mx-auto text-center reveal">
+      <p class="font-bold text-coral-dark uppercase tracking-wide text-sm">Pricing</p>
+      <h2 class="font-display font-semibold text-3xl sm:text-4xl mt-2 text-clay">Prices</h2>
+      <p class="mt-4 text-clay-soft">The Pittie Spa Package is an October promo. Prices may vary. Call to confirm yours.</p>
+    </div>
+
+    <div class="mt-16 grid lg:grid-cols-2 max-w-3xl mx-auto gap-8 items-center">
+      <div class="pricing-card reveal bg-white rounded-3xl p-8 shadow-softer border border-blush">
+        <h3 class="font-display font-semibold text-xl text-clay">Pittie Spa Package</h3>
+        <p class="mt-6 font-display font-semibold text-4xl text-coral-dark">$40 + tax</p>
+        <ul class="mt-6 space-y-3 text-sm text-clay-soft">
+          <li class="flex gap-2"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12.5l4 4L19 7" stroke="#4F6B52" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Bath</li>
+          <li class="flex gap-2"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12.5l4 4L19 7" stroke="#4F6B52" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Blueberry facial</li>
+          <li class="flex gap-2"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12.5l4 4L19 7" stroke="#4F6B52" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Ear cleaning</li>
+        </ul>
+        <a href="#contact" class="mt-8 block text-center bg-clay/5 hover:bg-clay/10 text-clay font-bold py-3 rounded-full transition-colors">Contact Us</a>
+      </div>
+
+      <div class="pricing-card pricing-card--popular reveal bg-coral-dark rounded-3xl p-8 shadow-soft relative">
+        <h3 class="font-display font-semibold text-xl text-white">Self-serve dog wash</h3>
+        <p class="mt-6 font-display font-semibold text-4xl text-white">starts at $12 + tax</p>
+        <ul class="mt-6 space-y-3 text-sm text-white/90">
+          <li class="flex gap-2"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12.5l4 4L19 7" stroke="#FFFBF6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>You bathe your own dog</li>
+          <li class="flex gap-2"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12.5l4 4L19 7" stroke="#FFFBF6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Supplies provided</li>
+        </ul>
+        <a href="#contact" class="mt-8 block text-center bg-white hover:bg-cream text-coral-dark font-bold py-3 rounded-full transition-colors">Contact Us</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="wave-divider" style="background-color:#FDECE1;" aria-hidden="true">
+  <svg viewBox="0 0 1440 100" preserveAspectRatio="none" focusable="false">
+    <path d="M0,40 C240,85 480,0 720,38 C960,76 1200,10 1440,46 L1440,100 L0,100 Z" fill="#FFFBF6"></path>
+  </svg>
+</div>
+
+<!-- =================================================================
+     LOCATION, HOURS, PHONE (the #contact target)
+================================================================== -->
+<section id="contact" class="py-24 sm:py-28">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8 grid lg:grid-cols-2 gap-10 items-stretch">
+    <div class="reveal">
+      <p class="font-bold text-coral-dark uppercase tracking-wide text-sm">Contact</p>
+      <h2 class="font-display font-semibold text-3xl sm:text-4xl mt-2 text-clay">Visit Basic Animal Care LLC.</h2>
+
+      <div class="mt-8 space-y-5">
+        <div class="flex items-start gap-3">
+          <svg class="mt-0.5 shrink-0" width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21s7-6.4 7-11.5S15.9 3 12 3 5 4.9 5 9.5 12 21 12 21Z" stroke="#C3090A" stroke-width="1.8" stroke-linejoin="round"/><circle cx="12" cy="9.5" r="2.5" stroke="#C3090A" stroke-width="1.8"/></svg>
+          <p class="text-clay-soft"><span class="font-bold text-clay block">8103 Airline Dr Ste k65, Houston, TX 77037</span></p>
+        </div>
+        <div class="flex items-start gap-3">
+          <svg class="mt-0.5 shrink-0" width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="#4F6B52" stroke-width="1.8"/><path d="M12 7v5l3.5 2" stroke="#4F6B52" stroke-width="1.8" stroke-linecap="round"/></svg>
+          <div class="text-clay-soft">
+            <p class="font-bold text-clay">Hours</p>
+            <p>Mon: Closed</p>
+            <p>Tue: 9 AM-3 PM</p>
+            <p>Wed: 9 AM-5 PM</p>
+            <p>Thu: 9 AM-5 PM</p>
+            <p>Fri: 9 AM-5 PM</p>
+            <p>Sat: 9 AM-5 PM</p>
+            <p>Sun: 11:30 AM-2:30 PM</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-3">
+          <svg class="mt-0.5 shrink-0" width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.2 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.7 21 3 13.3 3 4c0-.6.4-1 1-1h3.2c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.3 1.1L6.6 10.8Z" stroke="#C3090A" stroke-width="1.8" stroke-linejoin="round"/></svg>
+          <div class="text-clay-soft">
+            <p class="font-bold text-clay"><a href="tel:+18324335378" class="hover:text-coral-dark transition-colors">(832) 433-5378</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="reveal rounded-[2rem] overflow-hidden shadow-soft min-h-[320px] border-4 border-white">
+      <iframe
+        title="Map to Basic Animal Care LLC. in Houston, TX"
+        src="https://www.google.com/maps?q=Basic+Animal+Care+LLC.+8103+Airline+Dr+Ste+k65%2C+Houston%2C+TX+77037&amp;output=embed"
+        class="w-full h-full min-h-[320px]"
+        style="border:0;"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<div class="wave-divider" style="background-color:#FFFBF6;" aria-hidden="true">
+  <svg viewBox="0 0 1440 100" preserveAspectRatio="none" focusable="false">
+    <path d="M0,40 C240,85 480,0 720,38 C960,76 1200,10 1440,46 L1440,100 L0,100 Z" fill="#43342C"></path>
+  </svg>
+</div>
+
+<!-- =================================================================
+     FOOTER
+================================================================== -->
+<footer class="bg-clay text-cream/80 pt-16 pb-8">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8 grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
+    <div>
+      <a href="#home" class="flex items-center gap-2 mb-4">
+        <span class="w-10 h-10 rounded-2xl bg-coral overflow-hidden flex items-center justify-center">
+          <img src="assets/lead-logo.jpg" alt="Basic Animal Care LLC. logo" class="w-full h-full object-cover" width="40" height="40">
+        </span>
+        <span class="font-display font-semibold text-lg text-cream">Basic Animal Care LLC.</span>
+      </a>
+      <p class="text-sm">Pet groomer in Houston, TX.</p>
+      <div class="flex gap-3 mt-5">
+        <a href="https://www.instagram.com/basicanimalcare/" target="_blank" rel="noopener" aria-label="Instagram" class="w-9 h-9 rounded-full bg-white/10 hover:bg-coral flex items-center justify-center transition-colors">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" stroke="#FFFBF6" stroke-width="1.7"/><circle cx="12" cy="12" r="3.6" stroke="#FFFBF6" stroke-width="1.7"/><circle cx="17.2" cy="6.8" r="1" fill="#FFFBF6"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div>
+      <p class="font-display font-semibold text-cream mb-4">Quick Links</p>
+      <ul class="space-y-2.5 text-sm">
+        <li><a href="#services" class="hover:text-cream transition-colors">Services</a></li>
+        <li><a href="#gallery" class="hover:text-cream transition-colors">Gallery</a></li>
+        <li><a href="#about" class="hover:text-cream transition-colors">About Us</a></li>
+        <li><a href="#reviews" class="hover:text-cream transition-colors">Reviews</a></li>
+        <li><a href="#pricing" class="hover:text-cream transition-colors">Pricing</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <p class="font-display font-semibold text-cream mb-4">Services</p>
+      <ul class="space-y-2.5 text-sm">
+        <li>Dog grooming</li>
+        <li>Self-serve dog wash station</li>
+        <li>Pittie Spa Package</li>
+        <li>Nail trims</li>
+        <li>Same-day pickup and drop-off</li>
+      </ul>
+    </div>
+
+    <div>
+      <p class="font-display font-semibold text-cream mb-4">Contact</p>
+      <ul class="space-y-2.5 text-sm">
+        <li>8103 Airline Dr Ste k65</li>
+        <li>Houston, TX 77037</li>
+        <li><a href="tel:+18324335378" class="hover:text-cream transition-colors">(832) 433-5378</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="max-w-7xl mx-auto px-5 sm:px-8 mt-12 pt-6 border-t border-white/10 flex flex-col sm:flex-row justify-between items-center gap-3 text-xs text-cream/60">
+    <p>&copy; <span id="current-year">2026</span> Basic Animal Care LLC. All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- Back to top -->
+<button id="back-to-top" aria-label="Back to top" class="fixed bottom-6 right-6 z-40 w-12 h-12 rounded-full bg-coral-dark text-white shadow-soft flex items-center justify-center opacity-0" style="transform: translateY(12px);">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</button>
+
+<!-- GSAP (animation) — loaded with defer so it never blocks first paint -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+<script src="js/main.js" defer></script>
+</body>
+</html>
