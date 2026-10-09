@@ -86,10 +86,9 @@
     </a>
 
     <nav class="hidden lg:flex items-center gap-8 font-semibold text-clay/90" aria-label="Primary">
-      <a href="#services" class="nav-link">Services</a>
       <a href="#gallery" class="nav-link">Gallery</a>
+      <a href="#services" class="nav-link">Services &amp; Prices</a>
       <a href="#about" class="nav-link">About</a>
-      <a href="#pricing" class="nav-link">Pricing</a>
       <a href="#contact" class="nav-link">Contact</a>
     </nav>
 
@@ -111,10 +110,9 @@
 
   <div id="mobile-menu" class="lg:hidden absolute inset-x-0 top-full bg-cream shadow-xl rounded-b-3xl border-t border-coral-light/30 px-6 py-6">
     <nav class="flex flex-col gap-4 font-semibold text-lg" aria-label="Mobile">
-      <a href="#services" class="nav-link">Services</a>
       <a href="#gallery" class="nav-link">Gallery</a>
+      <a href="#services" class="nav-link">Services &amp; Prices</a>
       <a href="#about" class="nav-link">About</a>
-      <a href="#pricing" class="nav-link">Pricing</a>
       <a href="#contact" class="nav-link">Contact</a>
       <a href="tel:+13464688224" class="nav-link text-coral-dark">(346) 468-8224</a>
       <a href="#contact" class="inline-flex justify-center items-center gap-2 bg-coral-dark text-white font-bold px-5 py-3 rounded-full mt-2">Contact Us</a>
@@ -159,13 +157,13 @@
       </p>
 
       <div id="hero-ctas" class="mt-8 flex flex-wrap items-center gap-4">
-        <a href="#contact" class="inline-flex items-center gap-2 bg-coral-dark hover:bg-[#3F3F33] text-white font-bold px-7 py-3.5 rounded-full shadow-soft transition-all duration-300 hover:scale-105">
-          Contact Us
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </a>
-        <a href="tel:+13464688224" class="inline-flex items-center gap-2 bg-white hover:bg-blush text-clay font-bold px-7 py-3.5 rounded-full shadow-softer transition-all duration-300 border border-coral-light/40">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.2 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.7 21 3 13.3 3 4c0-.6.4-1 1-1h3.2c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.3 1.1L6.6 10.8Z" stroke="#2A2A22" stroke-width="1.8" stroke-linejoin="round"/></svg>
+        <a href="tel:+13464688224" class="inline-flex items-center gap-2 bg-coral-dark hover:bg-[#3F3F33] text-white font-bold px-7 py-3.5 rounded-full shadow-soft transition-all duration-300 hover:scale-105">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.2 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.7 21 3 13.3 3 4c0-.6.4-1 1-1h3.2c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.3 1.1L6.6 10.8Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
           Call Us
+        </a>
+        <a href="#services" class="inline-flex items-center gap-2 bg-white hover:bg-blush text-clay font-bold px-7 py-3.5 rounded-full shadow-softer transition-all duration-300 border border-coral-light/40">
+          See services &amp; prices
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
       </div>
 
@@ -187,27 +185,34 @@
 
 <div class="wave-divider" style="background-color:#FFFBF6;" aria-hidden="true">
   <svg viewBox="0 0 1440 100" preserveAspectRatio="none" focusable="false">
-    <path d="M0,40 C240,85 480,0 720,38 C960,76 1200,10 1440,46 L1440,100 L0,100 Z" fill="#2A2A22"></path>
+    <path d="M0,40 C240,85 480,0 720,38 C960,76 1200,10 1440,46 L1440,100 L0,100 Z" fill="#FDECE1"></path>
   </svg>
 </div>
 
 <!-- =================================================================
-     TRUST / STATS STRIP (Google rating and review count only)
+     PHOTO CAROUSEL
 ================================================================== -->
-<section id="stats" class="bg-coral-dark">
-  <div class="max-w-2xl mx-auto px-5 sm:px-8 py-10 grid grid-cols-2 gap-8 text-center">
-    <div class="reveal">
-      <p class="font-display font-semibold text-3xl sm:text-4xl text-white"><span data-count-to="5" data-suffix=".0★">0</span></p>
-      <p class="text-white/80 font-semibold text-sm mt-1">Google rating</p>
+<section id="gallery" class="py-24 sm:py-28 bg-blush overflow-hidden">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8">
+    <div class="max-w-2xl mx-auto text-center reveal">
+      <p class="font-bold text-coral-dark uppercase tracking-wide text-sm">Fresh from the tub</p>
+      <h2 class="font-display font-semibold text-3xl sm:text-4xl mt-2 text-clay">Meet some of our favorite faces</h2>
+      <p class="mt-4 text-clay-soft">Drag to browse, or click a photo to bring it front and center.</p>
     </div>
-    <div class="reveal">
-      <p class="font-display font-semibold text-3xl sm:text-4xl text-white"><span data-count-to="9">0</span></p>
-      <p class="text-white/80 font-semibold text-sm mt-1">Google reviews</p>
-    </div>
+  </div>
+
+  <div id="photo-carousel-track" class="photo-carousel-track mt-8 reveal" role="region" aria-label="Photo gallery, browse by dragging">
+    <div class="photo-carousel-card"><img src="assets/lead-work-1.jpg" alt="Kookie the pug with its tongue out, wearing a pink paw-print bandana" loading="lazy" width="230" height="290"></div>
+    <div class="photo-carousel-card"><img src="assets/lead-work-3.jpg" alt="Luna, a fluffy white and grey puppy with pink bows in its ears, on the grooming table" loading="lazy" width="230" height="290"></div>
+    <div class="photo-carousel-card"><img src="assets/lead-work-2.jpg" alt="Toto and Titi, two small tan dogs in paw-print bandanas, sitting in front of a Mexican flag beside a sombrero" loading="lazy" width="230" height="290"></div>
+    <div class="photo-carousel-card"><img src="assets/lead-work-5.jpg" alt="Pancho, a freshly trimmed white dog in an orange paw-print bandana, smiling on the grooming table" loading="lazy" width="230" height="290"></div>
+    <div class="photo-carousel-card"><img src="assets/lead-work-4.jpg" alt="A brown puppy in a blue harness sitting on the floor of the grooming shop" loading="lazy" width="230" height="290"></div>
+    <div class="photo-carousel-card"><img src="assets/lead-work-6.jpg" alt="A long-haired tan and white dog with a small pink bow, sitting on the grooming table" loading="lazy" width="230" height="290"></div>
+    <div class="photo-carousel-card"><img src="assets/lead-hero.jpg" alt="Small brown and white dog with large ears wearing a pink bandana and a green collar, sitting on the grooming table in the shop" loading="lazy" width="230" height="290"></div>
   </div>
 </section>
 
-<div class="wave-divider" style="background-color:#2A2A22;" aria-hidden="true">
+<div class="wave-divider" style="background-color:#FDECE1;" aria-hidden="true">
   <svg viewBox="0 0 1440 100" preserveAspectRatio="none" focusable="false">
     <path d="M0,40 C240,85 480,0 720,38 C960,76 1200,10 1440,46 L1440,100 L0,100 Z" fill="#FFFBF6"></path>
   </svg>
@@ -219,9 +224,9 @@
 <section id="services" class="py-24 sm:py-28">
   <div class="max-w-7xl mx-auto px-5 sm:px-8">
     <div class="max-w-2xl mx-auto text-center reveal">
-      <p class="font-bold text-coral-dark uppercase tracking-wide text-sm">Our Services</p>
-      <h2 class="font-display font-semibold text-3xl sm:text-4xl mt-2 text-clay">Grooming services</h2>
-      <p class="mt-4 text-clay-soft">What Jadys Pet Grooming offers in Houston.</p>
+      <p class="font-bold text-coral-dark uppercase tracking-wide text-sm">What we do</p>
+      <h2 class="font-display font-semibold text-3xl sm:text-4xl mt-2 text-clay">Spa day for your pup</h2>
+      <p class="mt-4 text-clay-soft">Prices may vary. Call to confirm yours.</p>
     </div>
 
     <div class="mt-16 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -289,38 +294,9 @@
 </div>
 
 <!-- =================================================================
-     PHOTO CAROUSEL
-================================================================== -->
-<section id="gallery" class="py-24 sm:py-28 bg-blush overflow-hidden">
-  <div class="max-w-7xl mx-auto px-5 sm:px-8">
-    <div class="max-w-2xl mx-auto text-center reveal">
-      <p class="font-bold text-coral-dark uppercase tracking-wide text-sm">Gallery</p>
-      <h2 class="font-display font-semibold text-3xl sm:text-4xl mt-2 text-clay">Photos from Jadys Pet Grooming</h2>
-      <p class="mt-4 text-clay-soft">Drag to browse, or click a photo to bring it front and center.</p>
-    </div>
-  </div>
-
-  <div id="photo-carousel-track" class="photo-carousel-track mt-8 reveal" role="region" aria-label="Photo gallery, browse by dragging">
-    <div class="photo-carousel-card"><img src="assets/lead-work-1.jpg" alt="Kookie the pug with its tongue out, wearing a pink paw-print bandana" loading="lazy" width="230" height="290"></div>
-    <div class="photo-carousel-card"><img src="assets/lead-work-3.jpg" alt="Luna, a fluffy white and grey puppy with pink bows in its ears, on the grooming table" loading="lazy" width="230" height="290"></div>
-    <div class="photo-carousel-card"><img src="assets/lead-work-2.jpg" alt="Toto and Titi, two small tan dogs in paw-print bandanas, sitting in front of a Mexican flag beside a sombrero" loading="lazy" width="230" height="290"></div>
-    <div class="photo-carousel-card"><img src="assets/lead-work-5.jpg" alt="Pancho, a freshly trimmed white dog in an orange paw-print bandana, smiling on the grooming table" loading="lazy" width="230" height="290"></div>
-    <div class="photo-carousel-card"><img src="assets/lead-work-4.jpg" alt="A brown puppy in a blue harness sitting on the floor of the grooming shop" loading="lazy" width="230" height="290"></div>
-    <div class="photo-carousel-card"><img src="assets/lead-work-6.jpg" alt="A long-haired tan and white dog with a small pink bow, sitting on the grooming table" loading="lazy" width="230" height="290"></div>
-    <div class="photo-carousel-card"><img src="assets/lead-hero.jpg" alt="Small brown and white dog with large ears wearing a pink bandana and a green collar, sitting on the grooming table in the shop" loading="lazy" width="230" height="290"></div>
-  </div>
-</section>
-
-<div class="wave-divider" style="background-color:#FDECE1;" aria-hidden="true">
-  <svg viewBox="0 0 1440 100" preserveAspectRatio="none" focusable="false">
-    <path d="M0,40 C240,85 480,0 720,38 C960,76 1200,10 1440,46 L1440,100 L0,100 Z" fill="#FFFBF6"></path>
-  </svg>
-</div>
-
-<!-- =================================================================
      ABOUT
 ================================================================== -->
-<section id="about" class="py-24 sm:py-28">
+<section id="about" class="py-24 sm:py-28 bg-blush">
   <div class="max-w-7xl mx-auto px-5 sm:px-8 grid lg:grid-cols-2 gap-14 items-center">
     <div class="relative reveal order-2 lg:order-1">
       <div class="blob-shape overflow-hidden shadow-soft aspect-[4/3] max-w-lg mx-auto lg:mx-0">
@@ -335,43 +311,11 @@
     </div>
 
     <div class="reveal order-1 lg:order-2">
-      <p class="font-bold text-coral-dark uppercase tracking-wide text-sm">About Us</p>
-      <h2 class="font-display font-semibold text-3xl sm:text-4xl mt-2 text-clay">About Jadys Pet Grooming</h2>
+      <p class="font-bold text-coral-dark uppercase tracking-wide text-sm">Our shop</p>
+      <h2 class="font-display font-semibold text-3xl sm:text-4xl mt-2 text-clay">Find us on Airline Dr</h2>
       <p class="mt-5 text-clay-soft">
         Jadys Pet Grooming is a pet groomer on Airline Dr in Houston. The shop offers a full bath with shampoo, conditioner and brushing, along with nail trims, ear cleaning, and face, feet and tail trims. Call to ask about a visit for your dog.
       </p>
-    </div>
-  </div>
-</section>
-
-<div class="wave-divider" style="background-color:#FFFBF6;" aria-hidden="true">
-  <svg viewBox="0 0 1440 100" preserveAspectRatio="none" focusable="false">
-    <path d="M0,40 C240,85 480,0 720,38 C960,76 1200,10 1440,46 L1440,100 L0,100 Z" fill="#FDECE1"></path>
-  </svg>
-</div>
-
-<!-- =================================================================
-     PRICING (only prices listed in the profile)
-================================================================== -->
-<section id="pricing" class="py-24 sm:py-28 bg-blush">
-  <div class="max-w-7xl mx-auto px-5 sm:px-8">
-    <div class="max-w-2xl mx-auto text-center reveal">
-      <p class="font-bold text-coral-dark uppercase tracking-wide text-sm">Pricing</p>
-      <h2 class="font-display font-semibold text-3xl sm:text-4xl mt-2 text-clay">Prices</h2>
-      <p class="mt-4 text-clay-soft">Prices may vary. Call to confirm yours.</p>
-    </div>
-
-    <div class="mt-16 grid lg:grid-cols-1 gap-8 max-w-md mx-auto items-center">
-      <div class="pricing-card pricing-card--popular reveal bg-coral-dark rounded-3xl p-8 shadow-soft relative">
-        <h3 class="font-display font-semibold text-xl text-white">Full bath</h3>
-        <p class="mt-6 font-display font-semibold text-4xl text-white">$40</p>
-        <ul class="mt-6 space-y-3 text-sm text-white/90">
-          <li class="flex gap-2"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12.5l4 4L19 7" stroke="#FFFBF6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Shampoo</li>
-          <li class="flex gap-2"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12.5l4 4L19 7" stroke="#FFFBF6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Brushing</li>
-          <li class="flex gap-2"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12.5l4 4L19 7" stroke="#FFFBF6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Nails</li>
-        </ul>
-        <a href="#contact" class="mt-8 block text-center bg-white hover:bg-cream text-coral-dark font-bold py-3 rounded-full transition-colors">Contact Us</a>
-      </div>
     </div>
   </div>
 </section>
@@ -386,10 +330,12 @@
      LOCATION, HOURS, PHONE (the #contact target)
 ================================================================== -->
 <section id="contact" class="py-24 sm:py-28">
-  <div class="max-w-7xl mx-auto px-5 sm:px-8 grid lg:grid-cols-2 gap-10 items-stretch">
-    <div class="reveal">
-      <p class="font-bold text-coral-dark uppercase tracking-wide text-sm">Contact</p>
-      <h2 class="font-display font-semibold text-3xl sm:text-4xl mt-2 text-clay">Visit Jadys Pet Grooming</h2>
+  <div class="max-w-7xl mx-auto px-5 sm:px-8 grid lg:grid-cols-2 gap-10">
+    <div class="reveal lg:col-start-1 lg:row-start-1">
+      <p class="font-bold text-coral-dark uppercase tracking-wide text-sm">Visit us</p>
+      <h2 class="font-display font-semibold text-3xl sm:text-4xl mt-2 text-clay">Ready for a squeaky-clean pup?</h2>
+      <p class="mt-4 text-clay-soft">Send a request, give us a call, or stop by our shop on Airline Dr.</p>
+      <a href="tel:+13464688224" class="inline-flex items-center gap-2 bg-coral-dark hover:bg-[#3F3F33] text-white font-bold px-5 py-2.5 rounded-full shadow-softer transition-all duration-300 hover:scale-105 mt-6">Call (346) 468-8224</a>
 
       <div class="mt-8 space-y-5">
         <div class="flex items-start gap-3">
@@ -418,11 +364,143 @@
       </div>
     </div>
 
-    <div class="reveal rounded-[2rem] overflow-hidden shadow-soft min-h-[320px] border-4 border-white">
+    <div class="reveal bg-white rounded-[2rem] shadow-soft p-6 sm:p-8 lg:col-start-2 lg:row-start-1 lg:row-span-2">
+      <div id="request-panel">
+        <h3 class="font-display font-semibold text-2xl text-clay">Request an appointment</h3>
+        <p class="text-clay-soft text-sm mt-1">Tell us about your pup and we'll reach out to confirm a time.</p>
+        <p class="text-xs text-clay-soft mt-4">* Required</p>
+
+        <form id="request-form" action="https://formsubmit.co/ajax/0stepworkflow@gmail.com" method="POST" novalidate class="mt-2">
+          <input type="hidden" name="_subject" value="Appointment request - Jadys Pet Grooming (demo A)">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="text" name="_honey" class="hidden" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+          <fieldset class="min-w-0 border-0 p-0 m-0">
+            <legend class="text-xs font-bold tracking-wide text-clay-soft uppercase mb-3 p-0">About you</legend>
+            <div class="grid sm:grid-cols-2 gap-4">
+              <div>
+                <label for="rf-name" class="block text-sm font-bold text-clay mb-1.5">Your name <span class="text-coral-dark" aria-hidden="true">*</span></label>
+                <input type="text" id="rf-name" name="name" class="w-full rounded-xl border border-clay/15 focus:border-coral-dark px-4 py-3 text-clay placeholder:text-clay-soft/60 transition-colors bg-white" aria-describedby="rf-name-error" required autocomplete="name">
+                <p id="rf-name-error" class="hidden text-sm text-red-700 mt-1.5"></p>
+              </div>
+              <div>
+                <label for="rf-phone" class="block text-sm font-bold text-clay mb-1.5">Phone <span class="text-coral-dark" aria-hidden="true">*</span></label>
+                <input type="tel" id="rf-phone" name="phone" class="w-full rounded-xl border border-clay/15 focus:border-coral-dark px-4 py-3 text-clay placeholder:text-clay-soft/60 transition-colors bg-white" aria-describedby="rf-phone-error" required autocomplete="tel" inputmode="tel">
+                <p id="rf-phone-error" class="hidden text-sm text-red-700 mt-1.5"></p>
+              </div>
+            </div>
+            <div class="mt-4">
+              <label for="rf-email" class="block text-sm font-bold text-clay mb-1.5">Email <span class="font-normal text-clay-soft">(optional)</span></label>
+                <input type="email" id="rf-email" name="email" class="w-full rounded-xl border border-clay/15 focus:border-coral-dark px-4 py-3 text-clay placeholder:text-clay-soft/60 transition-colors bg-white" aria-describedby="rf-email-error" autocomplete="email">
+              <p id="rf-email-error" class="hidden text-sm text-red-700 mt-1.5"></p>
+            </div>
+            <fieldset id="rf-contact-method" class="min-w-0 border-0 p-0 m-0 mt-4" aria-describedby="rf-contact-method-error">
+              <legend class="block text-sm font-bold text-clay mb-1.5 p-0">Best way to reach you</legend>
+              <div class="flex flex-wrap gap-2">
+                <label for="rf-cm-0" class="cursor-pointer">
+                  <input type="radio" class="sr-only peer" id="rf-cm-0" name="contact_method" value="Call" checked>
+                  <span class="inline-flex items-center min-h-[44px] rounded-full px-4 text-sm font-semibold bg-white text-clay border border-clay/15 peer-checked:bg-coral-dark peer-checked:text-white peer-checked:border-coral-dark peer-focus-visible:ring-2 peer-focus-visible:ring-coral-dark peer-focus-visible:ring-offset-2 transition-colors">Call</span>
+                </label>
+                <label for="rf-cm-1" class="cursor-pointer">
+                  <input type="radio" class="sr-only peer" id="rf-cm-1" name="contact_method" value="Text">
+                  <span class="inline-flex items-center min-h-[44px] rounded-full px-4 text-sm font-semibold bg-white text-clay border border-clay/15 peer-checked:bg-coral-dark peer-checked:text-white peer-checked:border-coral-dark peer-focus-visible:ring-2 peer-focus-visible:ring-coral-dark peer-focus-visible:ring-offset-2 transition-colors">Text</span>
+                </label>
+                <label for="rf-cm-2" class="cursor-pointer">
+                  <input type="radio" class="sr-only peer" id="rf-cm-2" name="contact_method" value="Email">
+                  <span class="inline-flex items-center min-h-[44px] rounded-full px-4 text-sm font-semibold bg-white text-clay border border-clay/15 peer-checked:bg-coral-dark peer-checked:text-white peer-checked:border-coral-dark peer-focus-visible:ring-2 peer-focus-visible:ring-coral-dark peer-focus-visible:ring-offset-2 transition-colors">Email</span>
+                </label>
+              </div>
+            </fieldset>
+            <p id="rf-contact-method-error" class="hidden text-sm text-red-700 mt-1.5"></p>
+          </fieldset>
+
+          <fieldset class="min-w-0 border-0 border-t border-clay/10 p-0 m-0 mt-6 pt-6">
+            <legend class="text-xs font-bold tracking-wide text-clay-soft uppercase mb-3 p-0">About your pup</legend>
+            <div class="grid sm:grid-cols-2 gap-4">
+              <div>
+                <label for="rf-dog" class="block text-sm font-bold text-clay mb-1.5">Dog's name <span class="text-coral-dark" aria-hidden="true">*</span></label>
+                <input type="text" id="rf-dog" name="dog_name" class="w-full rounded-xl border border-clay/15 focus:border-coral-dark px-4 py-3 text-clay placeholder:text-clay-soft/60 transition-colors bg-white" aria-describedby="rf-dog-error" required autocomplete="off">
+                <p id="rf-dog-error" class="hidden text-sm text-red-700 mt-1.5"></p>
+              </div>
+              <div>
+                <label for="rf-breed" class="block text-sm font-bold text-clay mb-1.5">Breed <span class="text-coral-dark" aria-hidden="true">*</span></label>
+                <input type="text" id="rf-breed" name="breed" class="w-full rounded-xl border border-clay/15 focus:border-coral-dark px-4 py-3 text-clay placeholder:text-clay-soft/60 transition-colors bg-white" aria-describedby="rf-breed-error" required autocomplete="off" placeholder="Shih Tzu, Doodle, mix…">
+                <p id="rf-breed-error" class="hidden text-sm text-red-700 mt-1.5"></p>
+              </div>
+            </div>
+            <fieldset id="rf-size" class="min-w-0 border-0 p-0 m-0 mt-4" aria-describedby="rf-size-error">
+              <legend class="block text-sm font-bold text-clay mb-1.5 p-0">Size <span class="text-coral-dark" aria-hidden="true">*</span></legend>
+              <div class="flex flex-wrap gap-2">
+                <label for="rf-size-0" class="cursor-pointer">
+                  <input type="radio" class="sr-only peer" id="rf-size-0" name="size" value="Small (under 20 lb)" required>
+                  <span class="inline-flex items-center min-h-[44px] rounded-full px-4 text-sm font-semibold bg-white text-clay border border-clay/15 peer-checked:bg-coral-dark peer-checked:text-white peer-checked:border-coral-dark peer-focus-visible:ring-2 peer-focus-visible:ring-coral-dark peer-focus-visible:ring-offset-2 transition-colors">Small (under 20 lb)</span>
+                </label>
+                <label for="rf-size-1" class="cursor-pointer">
+                  <input type="radio" class="sr-only peer" id="rf-size-1" name="size" value="Medium (20–50 lb)">
+                  <span class="inline-flex items-center min-h-[44px] rounded-full px-4 text-sm font-semibold bg-white text-clay border border-clay/15 peer-checked:bg-coral-dark peer-checked:text-white peer-checked:border-coral-dark peer-focus-visible:ring-2 peer-focus-visible:ring-coral-dark peer-focus-visible:ring-offset-2 transition-colors">Medium (20–50 lb)</span>
+                </label>
+                <label for="rf-size-2" class="cursor-pointer">
+                  <input type="radio" class="sr-only peer" id="rf-size-2" name="size" value="Large (50+ lb)">
+                  <span class="inline-flex items-center min-h-[44px] rounded-full px-4 text-sm font-semibold bg-white text-clay border border-clay/15 peer-checked:bg-coral-dark peer-checked:text-white peer-checked:border-coral-dark peer-focus-visible:ring-2 peer-focus-visible:ring-coral-dark peer-focus-visible:ring-offset-2 transition-colors">Large (50+ lb)</span>
+                </label>
+              </div>
+            </fieldset>
+            <p id="rf-size-error" class="hidden text-sm text-red-700 mt-1.5"></p>
+            <div class="grid sm:grid-cols-2 gap-4 mt-4">
+              <div>
+                <label for="rf-service" class="block text-sm font-bold text-clay mb-1.5">Service</label>
+                <select id="rf-service" name="service" class="w-full rounded-xl border border-clay/15 focus:border-coral-dark px-4 py-3 text-clay placeholder:text-clay-soft/60 transition-colors bg-white">
+                  <option value="Not sure yet" selected>Not sure yet</option>
+                  <option value="Full bath">Full bath</option>
+                  <option value="Nail cut and trim">Nail cut and trim</option>
+                  <option value="Ear cleaning">Ear cleaning</option>
+                  <option value="Mouth wash">Mouth wash</option>
+                  <option value="Face, feet, tail trims">Face, feet, tail trims</option>
+                  <option value="Perfume finish">Perfume finish</option>
+                </select>
+              </div>
+              <div>
+                <label for="rf-day" class="block text-sm font-bold text-clay mb-1.5">Preferred day</label>
+                <select id="rf-day" name="preferred_day" class="w-full rounded-xl border border-clay/15 focus:border-coral-dark px-4 py-3 text-clay placeholder:text-clay-soft/60 transition-colors bg-white">
+                  <option value="First available" selected>First available</option>
+                  <option value="Tuesday">Tuesday</option>
+                  <option value="Wednesday">Wednesday</option>
+                  <option value="Thursday">Thursday</option>
+                  <option value="Friday">Friday</option>
+                  <option value="Saturday">Saturday</option>
+                </select>
+              </div>
+            </div>
+            <div class="mt-4">
+              <label for="rf-notes" class="block text-sm font-bold text-clay mb-1.5">Anything we should know? <span class="font-normal text-clay-soft">(optional)</span></label>
+              <textarea id="rf-notes" name="notes" rows="3" class="w-full rounded-xl border border-clay/15 focus:border-coral-dark px-4 py-3 text-clay placeholder:text-clay-soft/60 transition-colors bg-white" placeholder="Matting, nervous around dryers, allergies…"></textarea>
+            </div>
+          </fieldset>
+
+          <div class="mt-6">
+            <button type="submit" id="request-submit" class="w-full sm:w-auto bg-coral-dark hover:bg-[#3F3F33] text-white font-bold px-8 py-3.5 rounded-full shadow-soft transition-colors">Send request</button>
+            <p class="text-sm text-clay-soft mt-3">Prefer to talk? <a href="tel:+13464688224" class="font-bold underline">Call (346) 468-8224</a></p>
+            <p id="request-status" role="status" aria-live="polite" class="text-sm mt-2"></p>
+          </div>
+        </form>
+      </div>
+
+      <div id="request-success" class="hidden text-center py-8" tabindex="-1">
+        <span class="mx-auto flex w-16 h-16 rounded-full bg-blush items-center justify-center">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" stroke="#2A2A22" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+        <h3 class="font-display font-semibold text-2xl text-clay mt-5">Request sent</h3>
+        <p id="request-success-text" class="text-clay-soft mt-2">Thanks! We'll reach out soon to confirm your visit.</p>
+        <button type="button" id="request-again" class="mt-6 text-sm font-bold underline text-clay">Send another request</button>
+      </div>
+    </div>
+
+    <div class="reveal rounded-[2rem] overflow-hidden shadow-soft min-h-[280px] border-4 border-white lg:col-start-1 lg:row-start-2">
       <iframe
         title="Map to Jadys Pet Grooming in Houston, TX"
         src="https://www.google.com/maps?q=Jadys+Pet+Grooming+11150+Airline+Dr+suite+200%2C+Houston%2C+TX+77037&amp;output=embed"
-        class="w-full h-full min-h-[320px]"
+        class="w-full h-full min-h-[280px]"
         style="border:0;"
         loading="lazy"
         referrerpolicy="no-referrer-when-downgrade">
@@ -462,10 +540,10 @@
     <div>
       <p class="font-display font-semibold text-cream mb-4">Quick Links</p>
       <ul class="space-y-2.5 text-sm">
-        <li><a href="#services" class="hover:text-cream transition-colors">Services</a></li>
         <li><a href="#gallery" class="hover:text-cream transition-colors">Gallery</a></li>
+        <li><a href="#services" class="hover:text-cream transition-colors">Services &amp; Prices</a></li>
         <li><a href="#about" class="hover:text-cream transition-colors">About Us</a></li>
-        <li><a href="#pricing" class="hover:text-cream transition-colors">Pricing</a></li>
+        <li><a href="#contact" class="hover:text-cream transition-colors">Contact</a></li>
       </ul>
     </div>
 
@@ -503,5 +581,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
 <script src="js/main.js" defer></script>
+<script src="js/contact-form.js" defer></script>
 </body>
 </html>
