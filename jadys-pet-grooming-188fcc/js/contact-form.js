@@ -28,7 +28,8 @@
     { id: 'rf-phone', check: function () {
         var v = val('rf-phone');
         if (!v) return 'Enter your phone number.';
-        return v.replace(/\D/g, '').length < 10 ? 'Enter a 10-digit phone number.' : '';
+        var d = v.replace(/\D/g, '').length;
+        return (d < 10 || d > 15) ? 'Enter a 10-digit phone number.' : '';
       } },
     { id: 'rf-email', check: function () {
         var v = val('rf-email');
@@ -50,12 +51,10 @@
     if (!el || !p) return;
     if (msg) {
       p.textContent = msg;
-      p.classList.remove('hidden');
       el.setAttribute('aria-invalid', 'true');
       if (!f.group) el.classList.add(RED);
     } else {
       p.textContent = '';
-      p.classList.add('hidden');
       el.removeAttribute('aria-invalid');
       if (!f.group) el.classList.remove(RED);
     }
@@ -100,6 +99,7 @@
         r.addEventListener('change', function () {
           touched[f.id] = true;
           setError(f, '');
+          setStatus('', false);
           // contact method change can affect the email requirement
           if (f.id === 'rf-contact-method' && touched['rf-email']) validateField(fields[2]);
         });
@@ -111,6 +111,7 @@
       });
       el.addEventListener('input', function () {
         setError(f, '');
+        setStatus('', false);
         if (f.id === 'rf-email') touched[f.id] = touched[f.id] || false;
       });
     }
@@ -149,7 +150,7 @@
     }).then(function (res) {
       return res.json().catch(function () { return {}; }).then(function (data) {
         var flag = data ? data.success : undefined;
-        var okFlag = !(flag === false || flag === 'false');
+        var okFlag = !!flag && flag !== 'false';
         if (res.ok && okFlag) {
           showSuccess(name, dog);
         } else {
@@ -177,8 +178,14 @@
     setStatus('', false);
     submitBtn.disabled = false;
     submitBtn.textContent = originalLabel;
+    var h = panel ? panel.offsetHeight : 0;
     if (panel) panel.classList.add('hidden');
     if (success) {
+      success.style.minHeight = h ? h + 'px' : '';
+      success.style.display = 'flex';
+      success.style.flexDirection = 'column';
+      success.style.justifyContent = 'center';
+      success.style.alignItems = 'center';
       success.classList.remove('hidden');
       success.focus();
     }
@@ -186,7 +193,11 @@
 
   if (again) {
     again.addEventListener('click', function () {
-      if (success) success.classList.add('hidden');
+      if (success) {
+        success.classList.add('hidden');
+        success.style.minHeight = '';
+        success.style.display = '';
+      }
       if (panel) panel.classList.remove('hidden');
       var first = $('rf-name');
       if (first) first.focus();

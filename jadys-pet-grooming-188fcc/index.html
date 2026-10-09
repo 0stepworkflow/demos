@@ -378,24 +378,24 @@
 
           <fieldset class="min-w-0 border-0 p-0 m-0">
             <legend class="text-xs font-bold tracking-wide text-clay-soft uppercase mb-3 p-0">About you</legend>
-            <div class="grid sm:grid-cols-2 gap-4">
+            <div class="grid sm:grid-cols-2 gap-x-4 gap-y-0">
               <div>
                 <label for="rf-name" class="block text-sm font-bold text-clay mb-1.5">Your name <span class="text-coral-dark" aria-hidden="true">*</span></label>
                 <input type="text" id="rf-name" name="name" class="w-full rounded-xl border border-clay/15 focus:border-coral-dark px-4 py-3 text-clay placeholder:text-clay-soft/60 transition-colors bg-white" aria-describedby="rf-name-error" required autocomplete="name">
-                <p id="rf-name-error" class="hidden text-sm text-red-700 mt-1.5"></p>
+                <p id="rf-name-error" class="text-sm text-red-700 mt-1 mb-3 min-h-5" aria-live="polite"></p>
               </div>
               <div>
                 <label for="rf-phone" class="block text-sm font-bold text-clay mb-1.5">Phone <span class="text-coral-dark" aria-hidden="true">*</span></label>
                 <input type="tel" id="rf-phone" name="phone" class="w-full rounded-xl border border-clay/15 focus:border-coral-dark px-4 py-3 text-clay placeholder:text-clay-soft/60 transition-colors bg-white" aria-describedby="rf-phone-error" required autocomplete="tel" inputmode="tel">
-                <p id="rf-phone-error" class="hidden text-sm text-red-700 mt-1.5"></p>
+                <p id="rf-phone-error" class="text-sm text-red-700 mt-1 mb-3 min-h-5" aria-live="polite"></p>
               </div>
             </div>
-            <div class="mt-4">
+            <div class="mt-0">
               <label for="rf-email" class="block text-sm font-bold text-clay mb-1.5">Email <span class="font-normal text-clay-soft">(optional)</span></label>
                 <input type="email" id="rf-email" name="email" class="w-full rounded-xl border border-clay/15 focus:border-coral-dark px-4 py-3 text-clay placeholder:text-clay-soft/60 transition-colors bg-white" aria-describedby="rf-email-error" autocomplete="email">
-              <p id="rf-email-error" class="hidden text-sm text-red-700 mt-1.5"></p>
+              <p id="rf-email-error" class="text-sm text-red-700 mt-1 mb-3 min-h-5" aria-live="polite"></p>
             </div>
-            <fieldset id="rf-contact-method" class="min-w-0 border-0 p-0 m-0 mt-4" aria-describedby="rf-contact-method-error">
+            <fieldset id="rf-contact-method" class="min-w-0 border-0 p-0 m-0 mt-0" aria-describedby="rf-contact-method-error">
               <legend class="block text-sm font-bold text-clay mb-1.5 p-0">Best way to reach you</legend>
               <div class="flex flex-wrap gap-2">
                 <label for="rf-cm-0" class="cursor-pointer">
@@ -412,24 +412,24 @@
                 </label>
               </div>
             </fieldset>
-            <p id="rf-contact-method-error" class="hidden text-sm text-red-700 mt-1.5"></p>
+            <p id="rf-contact-method-error" class="text-sm text-red-700 mt-1 mb-3 min-h-5" aria-live="polite"></p>
           </fieldset>
 
           <fieldset class="min-w-0 border-0 border-t border-clay/10 p-0 m-0 mt-6 pt-6">
             <legend class="text-xs font-bold tracking-wide text-clay-soft uppercase mb-3 p-0">About your pup</legend>
-            <div class="grid sm:grid-cols-2 gap-4">
+            <div class="grid sm:grid-cols-2 gap-x-4 gap-y-0">
               <div>
                 <label for="rf-dog" class="block text-sm font-bold text-clay mb-1.5">Dog's name <span class="text-coral-dark" aria-hidden="true">*</span></label>
                 <input type="text" id="rf-dog" name="dog_name" class="w-full rounded-xl border border-clay/15 focus:border-coral-dark px-4 py-3 text-clay placeholder:text-clay-soft/60 transition-colors bg-white" aria-describedby="rf-dog-error" required autocomplete="off">
-                <p id="rf-dog-error" class="hidden text-sm text-red-700 mt-1.5"></p>
+                <p id="rf-dog-error" class="text-sm text-red-700 mt-1 mb-3 min-h-5" aria-live="polite"></p>
               </div>
               <div>
                 <label for="rf-breed" class="block text-sm font-bold text-clay mb-1.5">Breed <span class="text-coral-dark" aria-hidden="true">*</span></label>
                 <input type="text" id="rf-breed" name="breed" class="w-full rounded-xl border border-clay/15 focus:border-coral-dark px-4 py-3 text-clay placeholder:text-clay-soft/60 transition-colors bg-white" aria-describedby="rf-breed-error" required autocomplete="off" placeholder="Shih Tzu, Doodle, mix…">
-                <p id="rf-breed-error" class="hidden text-sm text-red-700 mt-1.5"></p>
+                <p id="rf-breed-error" class="text-sm text-red-700 mt-1 mb-3 min-h-5" aria-live="polite"></p>
               </div>
             </div>
-            <fieldset id="rf-size" class="min-w-0 border-0 p-0 m-0 mt-4" aria-describedby="rf-size-error">
+            <fieldset id="rf-size" class="min-w-0 border-0 p-0 m-0 mt-0" aria-describedby="rf-size-error">
               <legend class="block text-sm font-bold text-clay mb-1.5 p-0">Size <span class="text-coral-dark" aria-hidden="true">*</span></legend>
               <div class="flex flex-wrap gap-2">
                 <label for="rf-size-0" class="cursor-pointer">
@@ -446,8 +446,8 @@
                 </label>
               </div>
             </fieldset>
-            <p id="rf-size-error" class="hidden text-sm text-red-700 mt-1.5"></p>
-            <div class="grid sm:grid-cols-2 gap-4 mt-4">
+            <p id="rf-size-error" class="text-sm text-red-700 mt-1 mb-3 min-h-5" aria-live="polite"></p>
+            <div class="grid sm:grid-cols-2 gap-4 mt-0">
               <div>
                 <label for="rf-service" class="block text-sm font-bold text-clay mb-1.5">Service</label>
                 <select id="rf-service" name="service" class="w-full rounded-xl border border-clay/15 focus:border-coral-dark px-4 py-3 text-clay placeholder:text-clay-soft/60 transition-colors bg-white">
@@ -481,7 +481,7 @@
           <div class="mt-6">
             <button type="submit" id="request-submit" class="w-full sm:w-auto bg-coral-dark hover:bg-[#3F3F33] text-white font-bold px-8 py-3.5 rounded-full shadow-soft transition-colors">Send request</button>
             <p class="text-sm text-clay-soft mt-3">Prefer to talk? <a href="tel:+13464688224" class="font-bold underline">Call (346) 468-8224</a></p>
-            <p id="request-status" role="status" aria-live="polite" class="text-sm mt-2"></p>
+            <p id="request-status" role="status" aria-live="polite" class="text-sm mt-2 min-h-10 sm:min-h-[1.5rem]"></p>
           </div>
         </form>
       </div>
