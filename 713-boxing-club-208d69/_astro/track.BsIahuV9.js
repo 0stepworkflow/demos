@@ -1,0 +1,1 @@
+function e(e,t={}){if(typeof window>`u`)return;let n=window;(n.dataLayer=n.dataLayer||[]).push({event:e,...t})}export{e as t};

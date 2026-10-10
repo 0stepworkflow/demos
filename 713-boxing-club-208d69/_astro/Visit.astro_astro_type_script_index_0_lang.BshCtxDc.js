@@ -1,0 +1,1 @@
+import{t as e}from"./track.BsIahuV9.js";document.querySelectorAll(`[data-track]`).forEach(t=>{t.addEventListener(`click`,()=>e(t.dataset.track))});var t=new Intl.DateTimeFormat(`en-US`,{weekday:`long`,timeZone:`America/Chicago`}).format(new Date),n=document.querySelector(`[data-hours] tr[data-day="${t}"]`);n&&(n.classList.add(`is-today`),n.setAttribute(`aria-current`,`date`));

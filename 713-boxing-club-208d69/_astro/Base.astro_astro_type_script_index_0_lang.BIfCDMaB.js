@@ -1,0 +1,1 @@
+import{t as e}from"./track.BsIahuV9.js";document.addEventListener(`click`,t=>{let n=t.target?.closest(`[data-cta]`);n?.dataset.cta&&e(`cta_click`,{location:n.dataset.cta}),t.target?.closest(`a[href^="tel:"]`)&&e(`call_click`)});
