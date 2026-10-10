@@ -1,0 +1,1 @@
+var e=document.querySelector(`[data-sticky-bar]`);if(e){let t=()=>e.classList.toggle(`is-visible`,window.scrollY>320);t(),window.addEventListener(`scroll`,t,{passive:!0})}
