@@ -1,0 +1,1 @@
+var e=document.querySelector(`[data-hero-cta]`);e&&!(`IntersectionObserver`in window)?document.documentElement.classList.add(`cta-shown`):e&&new IntersectionObserver(([e])=>document.documentElement.classList.toggle(`cta-shown`,!e.isIntersecting)).observe(e);
