@@ -1,1 +1,0 @@
-import{t as e}from"./lenis.CSh16SP9.js";function t(){let t=new e({autoRaf:!0,lerp:.1,anchors:{offset:-104}});window.__lenis=t}export{t as initSmooth};

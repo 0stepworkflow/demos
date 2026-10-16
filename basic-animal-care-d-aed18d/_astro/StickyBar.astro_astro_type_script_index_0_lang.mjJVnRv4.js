@@ -1,1 +1,0 @@
-var e=document.querySelector(`[data-sticky-bar]`),t=document.getElementById(`top`);e&&(t&&`IntersectionObserver`in window?new IntersectionObserver(([t])=>e.classList.toggle(`is-visible`,!t.isIntersecting),{rootMargin:`0px 0px -40% 0px`}).observe(t):e.classList.add(`is-visible`));
