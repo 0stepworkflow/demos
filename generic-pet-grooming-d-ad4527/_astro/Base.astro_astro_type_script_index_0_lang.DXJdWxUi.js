@@ -1,0 +1,2 @@
+const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["_astro/smooth.Cifuktbb.js","_astro/lenis.CSh16SP9.js"])))=>i.map(i=>d[i]);
+import{t as e}from"./preload-helper.DIitT-CT.js";!document.body.hasAttribute(`data-home`)&&window.matchMedia(`(prefers-reduced-motion: no-preference)`).matches&&e(()=>import(`./smooth.Cifuktbb.js`).then(e=>e.initSmooth()),__vite__mapDeps([0,1])).catch(()=>{});
